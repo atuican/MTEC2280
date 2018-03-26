@@ -1,16 +1,19 @@
 //Create a sketch with four LEDs. When you reset the Arduino, two of the four lights should turn on, and it should be truly random (or at least as random as we discussed). Print out the pin #s of the LEDs that are on.
 
-int ledPin[] = {2, 3, 4, 5, 6};
+int ledPin[] = {2, 3, 4, 5};
 
 void setup() {
   Serial.begin(9600);
-  Serial.println("Radical dude!");
 
   // generate a new random seed
-  randomSeed(analogRead(3));
+  randomSeed(analogRead(0));
 
-  int rando = random(6);
-  Serial.println(rando);
+  int rando1 = random(2, 6);
+  int rando2 = random(2, 6);
+  Serial.print(rando1);
+  Serial.print(" , ");
+  Serial.print(rando2);
+  Serial.println(" ");
 
   // sets all LED pins to OUTPUT
   for (int i = 0; i < 5; i++) {
@@ -22,9 +25,12 @@ void setup() {
     digitalWrite(ledPin[i], LOW);
   }
 
-  // turn ON as many LEDs as rando
-  for (int i = 0; i < rando; i++) {
-    digitalWrite(ledPin[i], HIGH);
+  for (int i = 0; i < rando1; i++) {
+    digitalWrite(rando1, HIGH);
+  }
+
+  for (int i = 0; i < rando2; i++) {
+    digitalWrite(rando2, HIGH);
   }
 }
 
