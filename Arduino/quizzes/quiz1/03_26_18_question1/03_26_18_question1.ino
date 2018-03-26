@@ -10,10 +10,6 @@ void setup() {
 
   int rando1 = random(2, 6);
   int rando2 = random(2, 6);
-  Serial.print(rando1);
-  Serial.print(" , ");
-  Serial.print(rando2);
-  Serial.println(" ");
 
   // sets all LED pins to OUTPUT
   for (int i = 0; i < 5; i++) {
@@ -30,8 +26,28 @@ void setup() {
   }
 
   for (int i = 0; i < rando2; i++) {
-    digitalWrite(rando2, HIGH);
+    if (rando2 == rando1) {
+      rando2 = random(2, 6);
+      digitalWrite(rando2, HIGH);
+      Serial.print("This is the if statement: ");
+      Serial.print(rando2);
+      Serial.println(" ");
+    }
+
+    else {
+      digitalWrite(rando2, HIGH);
+      Serial.print("This is the else statement: ");
+      Serial.print(rando2);
+      Serial.println(" ");
+    }
+
   }
+
+
+  Serial.print(rando1);
+  Serial.print(" , ");
+  Serial.print(rando2);
+  Serial.println(" ");
 }
 
 void loop() {
