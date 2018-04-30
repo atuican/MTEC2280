@@ -40,8 +40,14 @@ void setup() {
       Serial.print(rando2);
       Serial.println(" ");
     }
-
   }
+
+  //instead of the for{ if {} else {} }, you can do:
+  // while(rando1 == rando2) {
+  //  rabdi2 = random(2, 6);
+  // }
+
+
 
 
   Serial.print(rando1);
