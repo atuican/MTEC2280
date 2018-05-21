@@ -1,0 +1,5 @@
+1. Robot that mixes your ingredients into soup. You would need a servo setup that allows your robot arm to move in a 360 degree circle around the pot. The code shouldn't be too much of a problem, just needs to be calibrated to move two arms at once to achieve 360 degrees.
+
+2. Robot that types on a keyboard or on an app, and is able to post comments or commands into Twitter/Twitch. The code might be tricky, since it will need some kind of detection for specific keys and locations. The robot arm setup is more or less the same setup as the grabbing arm we did in class.
+
+3. Robot that moves back and forth, able to swipe left/right on a dating app, depending on the app. Code just needs to run the arm one way, then pick up and reset. Should be fairly simple to code as well.
